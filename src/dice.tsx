@@ -13,6 +13,12 @@ export function Dice(props: { onRoll: (value: number) => void }) {
         setValue(newValue)
     }, [])
 
+    const handleRoll= useCallback(() => {
+        const newValue = Math.floor(Math.random()*6+1)
+        props.onRoll(newValue)
+        setValue(newValue)
+    }, [])
+
     return(
     
         <div onClick={roll}>{value}</div>

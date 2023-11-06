@@ -10,6 +10,8 @@ function App() {
     }, 
     [])
 
+    const diceValues = [Dice];
+
 return (
   <>
   <Dice onRoll={handleRoll} />
